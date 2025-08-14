@@ -1,0 +1,15 @@
+# Telegram Bot Configuration
+TELEGRAM_BOT_TOKEN=8275709986:AAFaDfZjx0iB_x4Zd9B0nAyUtxQA-ZX8gi4
+TELEGRAM_CHAT_ID=-4846974930
+
+# Site Configuration
+SITE_DOMAIN=localhost:3000
+SITE_NAME=LeadBoost
+
+# Security
+RATE_LIMIT_SECONDS=30
+MAX_MESSAGE_LENGTH=1000
+
+# Development
+DEBUG_MODE=true
+LOG_SUBMISSIONS=true
