@@ -350,7 +350,7 @@ body {
 .services-title {
     position: absolute;
     top: 350px;
-    left: 128px;
+    left: 200px;
     width: 370px;
     height: 125px;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -469,8 +469,8 @@ body {
 
 .cases-title {
     position: absolute;
-    top: 0;
-    left: 128px;
+    top: 350px;
+    left: 70px;
     width: 345px;
     height: 125px;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -478,7 +478,7 @@ body {
     font-size: 96px;
     line-height: 100%;
     color: #333;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     transform-origin: left top;
     z-index: 5;
 }
@@ -572,7 +572,7 @@ body {
 
 .contact-title {
     position: absolute;
-    top: 50px;
+    top: 480px;
     left: calc(50% - 720px + 128px);
     width: 421px;
     height: 125px;
@@ -581,7 +581,7 @@ body {
     font-size: 96px;
     line-height: 100%;
     color: white;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     transform-origin: left top;
     z-index: 5;
 }

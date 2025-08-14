@@ -27,7 +27,7 @@ function loadEnv($path) {
 
 // Load .env file
 try {
-    loadEnv(__DIR__ . '/.env');
+    loadEnv('.env');
 } catch (Exception $e) {
     http_response_code(500);
     echo json_encode(['success' => false, 'message' => 'Configuration error']);

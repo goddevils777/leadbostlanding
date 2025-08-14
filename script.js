@@ -29,7 +29,7 @@ function toggleAccordion(element) {
 async function sendToTelegram(name, contact, message) {
     try {
         // Отправляем на наш PHP backend
-        const response = await fetch('./api/telegram-sender.php', {
+        const response = await fetch('./telegram-sender.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -56,6 +56,7 @@ async function sendToTelegram(name, contact, message) {
         };
     }
 }
+
 // Telegram username validation
 function validateTelegramUsername(username) {
     // Remove @ if present
@@ -157,22 +158,9 @@ async function handleFormSubmission() {
             }, 4000);
         });
     }
-} {
-                // Show success message
-                submitBtn.textContent = 'Заявка отправлена!';
-                submitBtn.style.background = '#10b981';
-                submitBtn.style.borderColor = '#10b981';
-                
-                // Reset form
-                form.reset();
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '#FFD700';
-                    submitBtn.style.borderColor = '#FFD700';
-    // Notification system
+}
+
+// Notification system
 function showNotification(message, type = 'info') {
     // Remove existing notifications
     const existingNotifications = document.querySelectorAll('.notification');
@@ -265,15 +253,13 @@ function initFormAnimations() {
     
     inputs.forEach(input => {
         // Add focus/blur animations
-        input.addEventListener('focus', function() {
-            this.style.transform = 'scale(1.02)';
-            this.style.borderBottomWidth = '2px';
-        });
-        
-        input.addEventListener('blur', function() {
-            this.style.transform = 'scale(1)';
-            this.style.borderBottomWidth = '1px';
-        });
+input.addEventListener('focus', function() {
+    this.style.borderBottomWidth = '2px';
+});
+
+input.addEventListener('blur', function() {
+    this.style.borderBottomWidth = '1px';
+});
         
         // Add typing animation
         input.addEventListener('input', function() {
@@ -361,17 +347,21 @@ document.addEventListener('DOMContentLoaded', function() {
 // Add some interactive features
 function addInteractiveFeatures() {
     // Add hover effect to case items
-    document.querySelectorAll('.case-item').forEach(caseItem => {
-        caseItem.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
-            this.style.transition = 'transform 0.3s ease';
-        });
-        
-        caseItem.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
+document.querySelectorAll('.case-item').forEach(caseItem => {
+    caseItem.addEventListener('mouseenter', function() {
+        this.style.backgroundColor = '#f9f9f9';
+        this.style.padding = '15px';
+        this.style.borderRadius = '8px';
+        this.style.transition = 'all 0.3s ease';
     });
     
+    caseItem.addEventListener('mouseleave', function() {
+        this.style.backgroundColor = 'transparent';
+        this.style.padding = '0';
+        this.style.borderRadius = '0';
+    });
+});
+
     // Add click effect to buttons
     document.querySelectorAll('.cta-button, .learn-more-btn, .submit-btn').forEach(btn => {
         btn.addEventListener('click', function() {
